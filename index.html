@@ -1,9 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>WalletPro 💰</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Wallet<span>Pro</span></h1>
+      </header>
+
+      <section class="dashboard">
+        <div class="card-resumo">
+          <h3>Entradas</h3>
+          <p id="total-entradas" class="positivo">R$ 0,00</p>
+        </div>
+        <div class="card-resumo">
+          <h3>Saídas</h3>
+          <p id="total-saidas" class="negativo">R$ 0,00</p>
+        </div>
+        <div class="card-resumo destaque">
+          <h3>Saldo Total</h3>
+          <p id="saldo-total">R$ 0,00</p>
+        </div>
+      </section>
+
+      <div class="grid-principal">
+        <aside>
+          <h2>Nova Transação</h2>
+          <form id="form-transacao">
+            <input
+              type="text"
+              id="input-desc"
+              placeholder="Descrição (Ex: Conta de Luz)"
+            />
+
+            <input
+              type="number"
+              id="input-valor"
+              placeholder="Valor (Ex: 150.50)"
+              step="0.01"
+            />
+
+            <select id="select-tipo">
+              <option value="Entrada">Receita (Entrada)</option>
+              <option value="Saída">Despesa (Saída)</option>
+            </select>
+
+            <button type="submit">ADICIONAR</button>
+          </form>
+        </aside>
+
+        <main>
+          <h2>Histórico</h2>
+          <ul id="lista-transacoes"></ul>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>
